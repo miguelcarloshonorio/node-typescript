@@ -9,13 +9,6 @@
     "build": "tsc",
     "start": "npm run build && node dist/entry.js"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test",
-      "pre-push": "npm run test",
-      "...": "..."
-    }
-  },
   "keywords": [],
   "author": "Micajeho",
   "license": "ISC",
