@@ -9,7 +9,12 @@
     "build": "tsc",
     "start": "npm run build && node dist/entry.js"
   },
-  "pre-commit": [ "npm", "run", "test" ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -43,7 +48,5 @@
       "node"
     ]
   },
-  "devDependencies": {
-    "pre-commit": "^1.2.2"
-  }
+  "devDependencies": {}
 }
