@@ -7,7 +7,12 @@
     "dev": "nodemon --watch src/ --exec \"ts-node src/entry.ts\" -e ts",
     "test": "jest --no-cache",
     "build": "tsc",
-    "start": "npm run build && node dist/entry.js"
+    "build-ts": "tsc",
+    "postinstall": "npm run build-ts",
+    "start": "npm run serve",
+    "serve": "node dist/server.js",
+    "watch-node": "nodemon dist/server.js",
+    "watch-ts": "tsc -w"
   },
   "keywords": [],
   "author": "Micajeho",
