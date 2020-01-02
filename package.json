@@ -12,12 +12,12 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run test",
-      "pre-push": "npm run test",npm t
+      "pre-push": "npm run test",
       "...": "..."
     }
   },
   "keywords": [],
-  "author": "",
+  "author": "Micajeho",
   "license": "ISC",
   "dependencies": {
     "@types/express": "^4.17.2",
@@ -49,5 +49,7 @@
       "node"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "husky": "^3.1.0"
+  }
 }
