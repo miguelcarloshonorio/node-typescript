@@ -1,6 +1,6 @@
 {
   "name": "node-typescript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,11 +8,14 @@
     "test": "jest --no-cache",
     "build": "tsc",
     "build-ts": "tsc",
-    "postinstall": "npm run build-ts",
-    "start": "npm run serve",
+    "postinstall": "yarn build-ts",
+    "start": "yarn serve",
     "serve": "node dist/entry.js"
   },
-  "keywords": [],
+  "keywords": [
+    "api",
+    "fake"
+  ],
   "author": "Micajeho",
   "license": "ISC",
   "dependencies": {
@@ -25,7 +28,6 @@
     "faker": "^4.1.0",
     "jest": "^24.9.0",
     "moment": "^2.24.0",
-    "nodemon": "^2.0.2",
     "readme-md-generator": "^1.0.0",
     "supertest": "^4.0.2",
     "ts-jest": "^24.2.0",
@@ -47,6 +49,7 @@
     ]
   },
   "devDependencies": {
-    "husky": "^3.1.0"
+    "husky": "^3.1.0",
+    "nodemon": "^2.0.2"
   }
 }

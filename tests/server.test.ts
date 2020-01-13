@@ -4,7 +4,13 @@ import server from "../src/server";
 
 test("[GET] /", async () => {
   const res = await req(server).get("/");
-  expect(res.text).toBe("Hello ts-node!");
+  expect(res.text).toBe(`
+  Hello ts-node! <br>
+  rotas disponíveis: <br>
+  /funcionarios <br>
+  /users <br>
+  /pessoas <br>
+  `);
 });
 
 

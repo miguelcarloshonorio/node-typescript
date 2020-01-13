@@ -4,7 +4,6 @@ const faker = require('faker');
 // define date locale para Brasil
 faker.locale = "pt_BR";
 
-
 const router = express.Router();
 
 // const pessoas: Pessoa[] = [];
@@ -19,8 +18,16 @@ router.get('/funcionarios', async (request, response) => {
   return response.json({ funcionarios: await fakePeoples() });
 });
 
+// melhorar depois. devolver um template talvez
 router.get("/", (_, res) => {
-  res.send("Hello ts-node!");
+  const textoRetorno = `
+  Hello ts-node! <br>
+  rotas disponíveis: <br>
+  /funcionarios <br>
+  /users <br>
+  /pessoas <br>
+  `
+  res.send(textoRetorno);
 });
 
 router.get("/users", async (_, res) => {
@@ -30,7 +37,7 @@ router.get("/users", async (_, res) => {
 
 async function fakePeoples() {
   for (let index = 0; index < 9; index++) {
-    let funcionario = new Funcionario(new Date(1981, 3, 25  ));
+    let funcionario = new Funcionario(new Date(1981, 3, 25));
     funcionario.name = faker.name.findName();
     funcionario.avatar = faker.image.avatar();
     funcionario.imageUrl = faker.image.imageUrl();
