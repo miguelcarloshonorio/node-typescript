@@ -36,6 +36,14 @@ yarn dev
 yarn test
 ```
 
+## Start
+
+```sh
+yarn start
+```
+
+* Local Run: [http://localhost:3333](http://localhost:3333)
+
 ## Author
 
 👤 **Miguel Carlos Honorio**
