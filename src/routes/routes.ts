@@ -21,11 +21,11 @@ router.get('/funcionarios', async (request, response) => {
 // melhorar depois. devolver um template talvez
 router.get("/", (_, res) => {
   const textoRetorno = `
-  Hello ts-node! <br>
-  rotas disponíveis: <br>
-  /funcionarios <br>
-  /users <br>
-  /pessoas <br>
+  <h2>Hello ts-node!</h2>
+  <h3>rotas disponíveis:</h3>
+  <a href="/funcionarios">/funcionarios</a> <br>
+  <a href="/users">/usuários</a> <br>
+  <a href="/pessoas">/pessoas</a> <br>
   `
   res.send(textoRetorno);
 });
