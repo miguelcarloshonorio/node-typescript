@@ -5,11 +5,11 @@ import server from "../src/server";
 test("[GET] /", async () => {
   const res = await req(server).get("/");
   expect(res.text).toBe(`
-  Hello ts-node! <br>
-  rotas disponíveis: <br>
-  /funcionarios <br>
-  /users <br>
-  /pessoas <br>
+  <h2>Hello ts-node!</h2>
+  <h3>rotas disponíveis:</h3>
+  <a href="/funcionarios">/funcionarios</a> <br>
+  <a href="/users">/usuários</a> <br>
+  <a href="/pessoas">/pessoas</a> <br>
   `);
 });
 
