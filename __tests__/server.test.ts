@@ -13,14 +13,21 @@ test("[GET] /", async () => {
   `);
 });
 
-
 test("[GET] /pessoas", async () => {
   const res = await req(server).get("/pessoas");
   expect(res.body.pessoas.lenght).not.toEqual(0);
 });
 
+test;
+
 test("[GET] /funcionarios", async () => {
   const res = await req(server).get("/funcionarios");
 
   expect(res.body.funcionarios.lenght).not.toEqual(0);
+});
+
+test("[GET] /funcionario undefined", async () => {
+  const res = await req(server).get("/funcionarios/1");
+
+  expect(res.body.funcionarios).toEqual(undefined);
 });
